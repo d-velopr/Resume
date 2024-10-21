@@ -17,7 +17,7 @@ body{
 .test{
     margin: 5px 5px 5px 10px;
     border-radius: 10px;
-    width: 350px;
+    width: 25%;
     height: 100%;
     background-color: rgb(0, 0, 0);
 }
@@ -52,10 +52,20 @@ body{
     text-align: center;
     font-size: 17px;
     margin: 10px;
-    background-color: rgb(41, 41, 41);
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.751);
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+    text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.headerTagBlack{
+    text-align: center;
+    font-size: 17px;
+    margin: 32px 10px 0 10px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.751);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
     text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .headerText{
@@ -133,7 +143,7 @@ a {
 .test2{
     margin: 5px 5px 5px 10px;
     border-radius: 10px;
-    width: 800px;
+    width: 50%;
     height: 100%;
     background-color: rgb(0, 0, 0);
 }
@@ -142,25 +152,66 @@ a {
     height: 100%;
     border-radius: 10px;
 }
+
+.orangeText{
+    color: #fecc4c;
+}
+.blueText{
+    color: rgb(53, 97, 255);
+}
+
 .test3{
-    margin: 5px 5px 0px 5px;
     border-radius: 10px;
-    width: 300px;
-    height: 100%;
+    width: 25%;
+    height: 50vh;
     background-color: rgb(0, 0, 0);
-    border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-    text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    padding: 0;
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    text-align: center;
 }
-.regFormm{
-    position: relative;
-    margin: 10px 0px 0px 5px;
-    height: 100%;
-    border-radius: 10px;
+
+#text {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
 }
-.sbut{
-    display: flex;
-    margin: 10px auto;
-    justify-content: center;
-    align-items: center;
+
+#game {
+    max-width: 500px;
+    max-height: 400px;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0px;
 }
+
+#controls,
+#stats {
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: #ffff;
+}
+
+#monsterStats {
+    display: none;
+    border: 1px solid #0a0a23;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #c70d0d;
+}
+
+.stat {
+    padding-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    color: #0a0a23;
+    background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+  }
+
