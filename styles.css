@@ -1,0 +1,217 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    text-decoration: none;
+    display: flex;
+}
+.underline{
+    text-decoration: underline;
+}
+
+.test{
+    margin: 5px 5px 5px 10px;
+    border-radius: 10px;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.nameTitle {
+    text-align: center;
+    font-size: 19px;
+    margin: -10px;
+}
+.profilePicture{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.profilePicture img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 1%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.profileList{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.headerTag{
+    text-align: center;
+    font-size: 17px;
+    margin: 10px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.751);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+    text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.headerTagBlack{
+    text-align: center;
+    font-size: 17px;
+    margin: 32px 10px 0 10px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.751);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+    text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.headerText{
+    padding: 5px;
+    padding-bottom: 7px;
+}
+.bio{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.biog{
+    text-align: justify;
+}
+.id{
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+    text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.id2{
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+    text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.container{
+    display: flex;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    max-width: 450px;
+}
+.left-column{
+    margin: 0px;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+a {
+    color: rgb(34, 0, 255);
+  }
+  
+  a:visited {
+    color: rgb(0, 222, 33);
+  }
+  
+  a:hover {
+    color: rgb(34, 0, 255);
+  }
+  
+  a:active {
+    color: rgb(34, 0, 255);
+}
+
+.circle {
+    display: inline-block; 
+    position: relative; 
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
+    border-radius: 50%; 
+    } 
+    .circle img { 
+    width: auto; 
+    height: 100%; 
+    margin-left: -50px; 
+    }
+
+.test2{
+    margin: 5px 5px 5px 10px;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.right-column{
+    margin: 0px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.orangeText{
+    color: #fecc4c;
+}
+.blueText{
+    color: rgb(53, 97, 255);
+}
+
+.test3{
+    border-radius: 10px;
+    width: 25%;
+    height: 50vh;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+    padding: 0;
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+#text {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#game {
+    max-width: 500px;
+    max-height: 400px;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0px;
+}
+
+#controls,
+#stats {
+  border: 1px solid #0a0a23;
+  padding: 5px;
+  color: #ffff;
+}
+
+#monsterStats {
+    display: none;
+    border: 1px solid #0a0a23;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #c70d0d;
+}
+
+.stat {
+    padding-right: 10px;
+}
+
+button {
+    cursor: pointer;
+    color: #0a0a23;
+    background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+  }
+
