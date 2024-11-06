@@ -17,7 +17,7 @@ body{
     font-size: auto;
 }
 .test{
-    margin: 5px 5px 5px 10px;
+    margin: 5px 0px 5px 10px;
     border-radius: 10px;
     width: 25%;
     height: 100%;
@@ -111,18 +111,17 @@ body{
     border-radius: 10px;
 
 }
-
 a {
     color: rgb(34, 0, 255);
-  }
+}
   
   a:visited {
     color: rgb(0, 222, 33);
-  }
+}
   
   a:hover {
     color: rgb(34, 0, 255);
-  }
+}
   
   a:active {
     color: rgb(34, 0, 255);
@@ -140,10 +139,18 @@ a {
     width: auto; 
     height: 100%; 
     margin-left: -50px; 
-    }
+}
+
+.noDisplay{
+    display: none;
+}
+.iPadVersion{
+    display: none;
+    text-align: center;
+}
 
 .test2{
-    margin: 5px 5px 5px 10px;
+    margin: 5px;
     border-radius: 10px;
     width: 50%;
     height: 100%;
@@ -168,8 +175,8 @@ a {
     height: 50vh;
     background-color: rgb(0, 0, 0);
     box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-    padding: 0;
-    margin: 5px 0 0 0;
+    padding: 1px 0 10px 0;
+    margin: 5px 10px 0 0;
     font-size: 16px;
     text-align: center;
 }
@@ -224,25 +231,33 @@ button {
         align-items: center;
     }
     .test{
-        margin: 10px 0 5px 20p;
+        margin: 10px 0 5px 17.5px;
         width: 90%;
         height: 100%;
-       
     }
     .test2{
-        margin: 0 0 5px 20p;
+        margin: 0 0 0 17.5px;
         width: 90%;
         height: 100%;
     }
     .test3{
-        margin: 0 0 5px 20p;
+        margin: 10px 0 15px 17.5px;
         width: 90%;
         height: 100%;
     }
-    .profilePicture{
-        width: auto;
-        height: auto;
-        margin: 0 auto;
+    .headerTagBlack{
+        text-align: center;
+        font-size: 17px;
+        margin: 0 10px 0 10px;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.751);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+        text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    }
+    .headerText{
+        padding: 5px 0 0 0;
+        padding-bottom: 7px;
     }
 }
 
@@ -272,31 +287,58 @@ button {
     .contact{
         font-size: 17px;
     }
-    
+    .headerTagBlack{
+        text-align: center;
+        font-size: 17px;
+        margin: 0 10px 0 10px;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.751);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+        text-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    }
+    .headerText{
+        padding: 5px 0 0 0;
+        padding-bottom: 7px;
+    }
 }
+@media all and (min-width: 400px) and (max-width: 500px){
+    .profilePicture{
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+
+/* iPads and Tablets */
 
 @media all and (min-width: 500px) and (max-width: 1000px){
     .test{
-        margin: 10px 0 5px 25px;
+        margin: 10px 0 10px 15px;
         width: 90%;
         height: 100%;
     }
     .test2{
-        margin: 0 0 5px 25px;
+        margin: 10px 15px 0 10px;
         width: 90%;
         height: 100%;
-    }
-    .test3{
-        margin: 0 0 5px 25px;
-        width: 90%;
-        height: 100%;
-        display: none;
     }
     .contact{
         font-size: 17px;
     }
+    .test3{
+        display: none;
+    }
+    .iPadVersion{
+        display: contents;
+    }
+    .noDisplay{
+        display: contents;
+    }
 }
-@media screen and (orientation:landscape){
-
+@media all and (min-width: 1000px) and (max-width: 1450px){
+    .test3{
+        height: 33%;
+    }
 }
-
