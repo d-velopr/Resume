@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /assets/
+Disallow: /css/
 Disallow: /images/
+Disallow: /js/
 Disallow: /LICENSE.txt
 Disallow: /README.txt

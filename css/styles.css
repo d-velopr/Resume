@@ -224,6 +224,37 @@ button {
     border: 3px solid #feac32;
 }
 
+.social-icon-one{
+	position:relative;
+}
+
+.social-icon-one li{
+	position:relative;
+	margin-left:15px;
+	float: left;
+}
+
+.social-icon-one li a{
+	position:relative;
+	display:block;
+	font-size:16px;
+	line-height: 30px;
+	color:#ffffff;
+	-webkit-transition:all 300ms ease;
+	-ms-transition:all 300ms ease;
+	-o-transition:all 300ms ease;
+	-moz-transition:all 300ms ease;
+	transition:all 300ms ease;
+}
+
+.social-icon-one li a span{
+	display: inline-block;
+}
+
+.social-icon-one li a:hover{
+	color:#36404b;
+}
+
 @media all and (min-width: 0px) and (max-width: 360px){
     body{
         display:block;
