@@ -1,2 +1,2 @@
 # Resume
-Dvelupr.com coming soon ..
+Dvelupr.com
