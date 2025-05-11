@@ -293,13 +293,12 @@
           <div class="headerTag" name="packages">
             <h2 class="headerText">Custom Website Packages</h2>
           </div>
-          <p style="color: rgb(255, 255, 255)">
-            <strong
-              >From Landing Pages To Web-Apps..<br />
-              Here's A One-Time Payment Solution !<br />
-              Unlike Wix or WordPress, You Keep Full Control & Save
-              Long-Term</strong
-            >
+          <p style="margin-top: -10px">From Landing Pages To Web-Apps..</p>
+          <p style="margin-top: -10px">
+            <strong>I Offer A One-Time Payment Solution !</strong>
+          </p>
+          <p style="margin-top: -10px">
+            Unlike Wix or WordPress, You Keep Full Control & Save Long-Term
           </p>
           <!-- Landing Page Package -->
           <div class="id3" name="starterPackage" style="margin-bottom: 12px">
@@ -328,7 +327,7 @@
               >
                 Starting at $300
               </p>
-              <button>Book Appointment</button>
+              <button onclick="showPopup()">Book Appointment</button>
             </div>
           </div>
           <!-- Basic Business Website Package -->
@@ -369,11 +368,7 @@
               >
                 Starting at $2,000
               </p>
-              <button
-                class="id3-mt-4 id3-bg-orange-600 id3-text-white id3-font-semibold id3-px-4 id3-py-2 id3-rounded hover:id3-bg-orange-700 transition"
-              >
-                Book Appointment
-              </button>
+              <button onclick="showPopup()">Book Appointment</button>
             </div>
           </div>
           <!-- Premium Web Application Package -->
@@ -401,8 +396,8 @@
                   E-commerce Payment Gateway Integration (Stripe, PayPal, etc.)
                 </li>
                 <li>
-                  Real-Time Notifications ; Send Instant Updates to Users (e.g.
-                  Order Updates, Messages, Alerts)
+                  Real-Time User Notifications ; Send Instant Updates to Users
+                  (e.g. Order Updates, Messages, Alerts)
                 </li>
                 <li>User Account System (Sign Up, Login, Password Security)</li>
                 <li>Ongoing Support After Launch</li>
@@ -419,18 +414,14 @@
               >
                 Starting at $3,000
               </p>
-              <button
-                class="id3-mt-4 id3-bg-orange-500 id3-text-white id3-font-semibold id3-px-4 id3-py-2 id3-rounded hover:id3-bg-orange-600 transition"
-              >
-                Book Appointment
-              </button>
+              <button onclick="showPopup()">Book Appointment</button>
             </div>
           </div>
         </div>
         <!-- JS Mini Game -->
         <div class="id3" name="miniGame">
           <div class="headerTagBlack" name="miniGameTitle">
-            <h2 class="headerText">Mini-Game</h2>
+            <h2 class="headerText" style="margin-top: -1.5px">Mini-Game</h2>
           </div>
           <div id="game">
             <div id="stats">
@@ -465,6 +456,91 @@
         </div>
       </div>
     </div>
+
+    <!-- Website Packages Pop Up Form (js/packagesPopUp.js) -->
+    <div id="bookAppointment" class="popup-overlay">
+      <div class="popup-content">
+        <button class="close-btn" onclick="closePopup()">X</button>
+        <h2>Book An Appointment</h2>
+        <form id="contactForm" autocomplete="off">
+          <label for="name">Name*</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter First and Last Name"
+            required
+          />
+
+          <label for="phone">Phone*</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter Phone Number"
+            required
+          />
+
+          <label for="email">Email*</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter Email Address"
+            required
+          />
+
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Please include a preferred Date and Time for a meeting via Zoom"
+          ></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+        <!-- Google Data Handling-->
+        <script>
+          document
+            .getElementById("contactForm")
+            .addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              const data = {
+                name: document.getElementById("name").value.trim(),
+                phone: document.getElementById("phone").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                message: document.getElementById("message").value.trim(),
+              };
+
+              // Replace this URL with your actual Google Apps Script Web App URL
+              const endpoint =
+                "https://script.google.com/macros/s/AKfycbyP964VdRRx7Z1n7KphMHO6ECsv_oozD70Ai3RB8nLaqNvFC-1mmOTycqC6ar1vbJ1S/exec";
+
+              fetch(endpoint, {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((res) => res.json())
+                .then((response) => {
+                  alert("Thank you! Your message has been sent successfully.");
+                  document.getElementById("contactForm").reset();
+                  closePopup();
+                })
+                .catch((err) => {
+                  alert("Oops! Something went wrong. Please try again later.");
+                  console.error("Submission error:", err);
+                });
+            });
+        </script>
+      </div>
+    </div>
+
     <script src="js/script.js"></script>
+    <script src="js/packagesPopUp.js"></script>
   </body>
 </html>
