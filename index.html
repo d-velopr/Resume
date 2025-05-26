@@ -457,7 +457,7 @@
       </div>
     </div>
 
-    <!-- Website Packages Pop Up Form (js/packagesPopUp.js) -->
+    <!-- Website Packages Pop Up Form (js/packagesPopUp.js)-->
     <div id="bookAppointment" class="popup-overlay">
       <div class="popup-content">
         <button class="close-btn" onclick="closePopup()">X</button>
@@ -500,46 +500,36 @@
 
           <button type="submit">Send</button>
         </form>
-        <!-- Google Data Handling-->
-        <script>
-          document
-            .getElementById("contactForm")
-            .addEventListener("submit", function (e) {
-              e.preventDefault();
-
-              const data = {
-                name: document.getElementById("name").value.trim(),
-                phone: document.getElementById("phone").value.trim(),
-                email: document.getElementById("email").value.trim(),
-                message: document.getElementById("message").value.trim(),
-              };
-
-              // Replace this URL with your actual Google Apps Script Web App URL
-              const formData = new FormData(
-                document.getElementById("contactForm")
-              );
-
-              fetch(
-                "https://script.google.com/macros/s/AKfycbyP964VdRRx7Z1n7KphMHO6ECsv_oozD70Ai3RB8nLaqNvFC-1mmOTycqC6ar1vbJ1S/exec",
-                {
-                  method: "POST",
-                  body: new FormData(document.getElementById("contactForm")),
-                  mode: "no-cors",
-                }
-              )
-                .then(() => {
-                  alert("Thank you! Your message has been sent successfully.");
-                  document.getElementById("contactForm").reset();
-                  closePopup();
-                })
-                .catch((err) => {
-                  alert("Oops! Something went wrong. Please try again later.");
-                  console.error("Submission error:", err);
-                });
-            });
-        </script>
       </div>
     </div>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = document.getElementById("contactForm");
+          const formData = new FormData(form);
+
+          const scriptURL =
+            "https://script.google.com/macros/s/AKfycbznxRixwTD2N1fH1PRRMze5aNvhftfrEietQk9wWkwSyLR81vk7ZTgGYy_U8mEPe283xA/exec";
+
+          fetch(scriptURL, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              alert("Thank you! Your message has been sent.");
+              form.reset();
+              closePopup();
+            })
+            .catch((error) => {
+              alert("Oops! Something went wrong. Please try again.");
+              console.error("Submission error:", error);
+            });
+        });
+    </script>
 
     <script src="js/script.js"></script>
     <script src="js/packagesPopUp.js"></script>
